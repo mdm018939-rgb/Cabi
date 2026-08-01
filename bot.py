@@ -224,7 +224,7 @@ while True:
                             f"🌐 <b>Service:</b> {service_name}\n"
                             f"🏳️ <b>Country:</b> {country_display}\n"
                             f"📞 <b>Number:</b> <code>{masked_num}</code>\n\n"
-                            f"🔑 <b>Code:</b> <code>{otp_code}</code>\n\n"
+                            f"🔐 <b>Code:</b> <code>{otp_code}</code>\n\n"
                             f"<blockquote>{safe_message_content}</blockquote>"
                         )
                         
