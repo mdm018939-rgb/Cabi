@@ -34,7 +34,7 @@ COUNTRY_CODES = {
     "387": "🇧🇦 Bosnia and Herzegovina", "267": "🇧🇼 Botswana", "55": "🇧🇷 Brazil",
     "673": "🇧🇳 Brunei", "359": "🇧🇬 Bulgaria", "226": "🇧🇫 Burkina Faso",
     "257": "🇧🇮 Burundi", "238": "🇨🇻 Cabo Verde", "855": "🇰🇭 Cambodia",
-    "237": "🇨🇲 Cameroon", "236": "🇨🇫 Central African Republic", "235": "🇹🇩 Chad",
+    "237": "🇨🇲 Cameroon", "236": "🇨🇫 Central African", "235": "🇹🇩 Chad",
     "56": "🇨🇱 Chile", "86": "🇨🇳 China", "57": "🇨🇴 Colombia",
     "269": "🇰🇲 Comoros", "242": "🇨🇬 Congo (Republic)", "243": "🇨🇩 Congo (DRC)",
     "506": "🇨🇷 Costa Rica", "385": "🇭🇷 Croatia", "53": "🇨🇺 Cuba",
