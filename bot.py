@@ -4,6 +4,8 @@ import requests
 import telebot
 import time
 import re
+from langdetect import detect
+import langcodes
 import html  # HTML Escape করার জন্য ইমপোর্ট করা হলো
 from datetime import datetime
 import pytz
@@ -224,6 +226,12 @@ while True:
                         service_name = html.escape(detect_service(message_content))
                         country_display = html.escape(get_country_info(raw_number))
                         masked_num = html.escape(mask_number(raw_number))
+                        try:
+                            lang = detect(message_content)
+                            lang_name = langcodes.get(lang).display_name()
+                            lang_tag = f"#{lang_name}"
+                        except:
+                            lang_tag = "#Unknown"
                         
                         # 📝 আগের সব ডিটেইলস ঠিক রেখে শুধু নিচের মেসেজটি blockquote করা হলো
                         otp_message_text = (
@@ -232,7 +240,7 @@ while True:
                             f"🏳️ <b>Country:</b> {country_display}\n"
                             f"📞 <b>Number:</b> <code>{masked_num[:-3]}</code>{masked_num[-3:]}\n\n"
                             f"🔐 <b>Code:</b> <code>{otp_code}</code>\n\n"
-                            f"<blockquote><code>{safe_message_content}</code></blockquote>"
+                            f"<blockquote>{lang_tag}\n<code>{safe_message_content}</code></blockquote>"
                         )
                         
                         # 🔘 বাটন দুটি এক লাইনে পাশাপাশি (Inline Row) সেট করা হলো
